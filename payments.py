@@ -3,7 +3,7 @@
 
 def validate_amount(amount: int) -> bool:
     """Return whether an amount in cents can be charged."""
-    return type(amount) is int and amount >= 0
+    return type(amount) is int and amount > 0
 
 
 def format_receipt(amount: int) -> str:
