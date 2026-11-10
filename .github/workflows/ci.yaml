@@ -18,10 +18,14 @@ jobs:
           python-version: "3.14"
 
       - name: Install dependencies
-        run: python -m pip install pytest ruff
+        run: python -m pip install pytest ruff bandit
       
       - name: Run tests
         run: python -m pytest -q
   
       - name: Ruff tests
         run : ruff check .
+        
+      - name: security scan
+        run : python -m bandit -r payments.py tests/
+
