@@ -1,5 +1,6 @@
 """Tests of the core payment validation behavior."""
 import unittest
+
 from payments import validate_amount
 
 
